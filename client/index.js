@@ -1,3 +1,5 @@
+//  run: npx parcel index.html  in client folder
+
 import "./index.scss";
 
 const server = "http://localhost:3042";
@@ -24,7 +26,7 @@ document.getElementById("transfer-amount").addEventListener('click', () => {
   const body = JSON.stringify({
     sender, amount, recipient, signature
   });
-  // console.log(body)  ***** why can't i get anything to log out??
+  console.log(body) 
   const request = new Request(`${server}/send`, { method: 'POST', body });
 
   fetch(request, { headers: { 'Content-Type': 'application/json' } }).then(response => {
