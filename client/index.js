@@ -26,7 +26,7 @@ document.getElementById("transfer-amount").addEventListener('click', () => {
   const body = JSON.stringify({
     sender, amount, recipient, signature
   });
-  console.log(body) 
+  // console.log(body) 
   const request = new Request(`${server}/send`, { method: 'POST', body });
 
   fetch(request, { headers: { 'Content-Type': 'application/json' } }).then(response => {

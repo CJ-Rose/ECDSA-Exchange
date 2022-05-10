@@ -14,8 +14,8 @@ const privateKey = "d73cb6559cf3231247d7880bddc559ea30547b2e7881853c01388bcbe877
     let signature = await secp.sign(messageHash, privateKey);
     signature = Buffer.from(signature).toString('hex');
           
-    console.log(messageHash)
-    console.log(signature)
+    // console.log(messageHash)
+    // console.log(signature)
 
 })();
 

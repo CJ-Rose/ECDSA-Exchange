@@ -41,8 +41,8 @@ app.post('/send', (req, res) => {
     let recoveredPublicKey = secp.recoverPublicKey(messageHash, signature, 1);
     recoveredPublicKey = Buffer.from(recoveredPublicKey).toString('hex');
 
-    console.log(messageHash)
-    console.log(recoveredPublicKey) 
+    // console.log(messageHash)
+    // console.log(recoveredPublicKey) 
   
     if (secp.verify(signature, messageHash, recoveredPublicKey)) {
       console.log("success!");
